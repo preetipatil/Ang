@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="myFirstmodule">
+<head>
+    <meta content=""  charset="utf-8">
+    <title>Anugular Basic - My HTML File-Simple Sorting </title>
+    <script type=""  src="scripts/angular.min.js"></script>
+    <script type=""  src="scripts/script10.js"></script>
+</head>
+<body  ng-controller="myFirstController">
+<div>
+
+    <table style="border:solid;">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>DOB</th>
+            <th>Salary</th>
+            <th>Occupation</th>
+        </tr>
+        <tr style="border:1px" ng-repeat="employee in employees | orderBy:'-name'">
+            <td>{{employee.name | uppercase }}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.dob | date:"dd/MM/yyyy"}}</td>
+            <td>{{employee.salary| currency:"£"}}</td>
+            <td>{{employee.occupation| lowercase}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

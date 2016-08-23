@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="myFirstmodule">
+    <head>
+        <meta content=""  charset="utf-8">
+        <title>Anugular Basic - My HTML File- ng-src </title>
+        <script type=""  src="scripts/angular.min.js"></script>
+	<script type=""  src="scripts/script5.js"></script>
+    </head>
+    <body ng-controller="myFirstController">
+        <div id="without-ng-src" style="border:solid;" >
+		<div>	
+			Name:{{country.name}}
+		</div>
+		<div>	
+			City:{{country.city}}
+		</div>
+		<div>	
+			Attraction:
+			<img src="{{country.attraction}}" alt="{{country.name + 'attaction'}}" style="height:150px;width:150px" />
+
+			<br/>
+			<p style="color:red;">[ this img tag sends 2 request to server 
+			1: try to find image with path "/{/{country.attraction/}/}//" see error in console :LGET http://localhost/ANG/html/%7B%7Bcountry.attraction%7D%7D 404 (Not Found)
+			2: After anguler calculation it map to actual path "image/lb.jpg"
+			]
+			</p>
+		</div>
+        </div>
+	
+	<div id="with-ng-src">
+		<div>	
+			Name:{{country.name}}
+		</div>
+		<div>	
+			City:{{country.city}}
+		</div>
+		<div>	
+			Attraction:
+			<img ng-src="{{country.attraction}}" alt="{{country.name + 'attaction'}}" style="height:150px;width:150px" />
+
+			[ this img tag sends only one request to server with using ng-src ]
+		</div>
+        </div>
+    </body>
+</html>

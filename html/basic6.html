@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="myFirstmodule">
+    <head>
+        <meta content=""  charset="utf-8">
+        <title>Anugular Basic - My HTML File-two way data binding </title>
+        <script type=""  src="scripts/angular.min.js"></script>
+	<script type=""  src="scripts/script4.js"></script>
+    </head>
+    <body  ng-controller="myFirstController">
+	<div>
+		 Name of the Student <input type ="text" ng-model="child.name" />
+		<br/>Age of the Student: <input type ="text" ng-model="child.age" />
+		<br/>Activity:<input type ="text" ng-model="child.activity" />
+        </div>
+	<br/>
+        <div style="color:red;">
+		 Name of the Student:{{child.name}}
+		<br/>Age of the Student: {{child.age}}
+		<br/>Activity: {{child.activity}}
+        </div>
+    </body>
+</html>

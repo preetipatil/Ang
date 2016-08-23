@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="myFirstmodule">
+<head>
+    <meta content=""  charset="utf-8">
+    <title>Anugular Basic - My HTML File-ng click </title>
+    <script type=""  src="scripts/angular.min.js"></script>
+    <script type=""  src="scripts/script9.js"></script>
+</head>
+<body  ng-controller="myFirstController">
+<div>
+        <table style="border:solid;">
+                <tr>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislike</th>
+                    <th>Vote</th>
+                </tr>
+                <tr style="border:1px" ng-repeat="sport in sports">
+                    <td>{{sport.name}}</td>
+                    <td>{{sport.likes}}</td>
+                    <td>{{sport.dislikes}}</td>
+                    <td>
+                        <input type="button" value="Like" ng-click="incrementVote(sport)">
+                        <input type="button" value="Dislike" ng-click="decrementVote(sport)">
+                    </td>
+                </tr>
+        </table>
+</div>
+</body>
+</html>

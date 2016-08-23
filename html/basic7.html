@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="myFirstmodule">
+    <head>
+        <meta content=""  charset="utf-8">
+        <title>Anugular Basic - My HTML File-ng repeat directive </title>
+        <script type=""  src="scripts/angular.min.js"></script>
+	<script type=""  src="scripts/script7.js"></script>
+    </head>
+    <body  ng-controller="myFirstController">
+	<div>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Activity</th>
+			</tr>
+			<tr ng-repeat="child in children">
+				<td>{{child.name}}</td>
+				<td>{{child.age}}</td>
+				<td>{{child.activity}}</td>
+			</tr>
+		</table>		 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="myFirstmodule">
+    <head>
+        <meta content=""  charset="utf-8">
+        <title>Anugular Basic - My HTML File-ng repeat directive </title>
+        <script type=""  src="scripts/angular.min.js"></script>
+	<script type=""  src="scripts/script8.js"></script>
+    </head>
+    <body  ng-controller="myFirstController">
+	<div>
+		<ul>
+			<li ng-repeat="student in school">
+				{{student.classNo}}	
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Activity</th>
+					</tr>
+					<tr ng-repeat="child in student.students">
+						<td>{{child.name }}</td>
+						<td>{{child.age}}</td>
+						<td>{{child.activity}}</td>
+					</tr>
+				</table>	
+			</li>
+		</ul>		 
+        </div>
+    </body>
+</html>
