@@ -1,2 +1,2 @@
 # Ang
-Anguler
+Angular
